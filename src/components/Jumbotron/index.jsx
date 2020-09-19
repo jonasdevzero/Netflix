@@ -3,12 +3,12 @@ import React from 'react'
 import { Container, Wrap, Title, Subtitle, Image, Item, Content } from './Styles'
 import jumbotronData from '../../assets/jumbotronData.json'
 
-function Jumbotron({ direction = 'row' }) {
+function Jumbotron() {
     return (
         <Container>
             {jumbotronData.map(item => (
-                <Item key={item.id} direction={item.direction}>
-                    <Content direction={direction}>
+                <Item key={item.id}>
+                    <Content direction={item.direction}>
                         <Wrap>
                             <Title>{item.title}</Title>
                             <Subtitle>{item.subTitle}</Subtitle>
