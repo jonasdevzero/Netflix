@@ -32,7 +32,6 @@ export const Wrap = styled.div`
 
     @media (max-width: 1000px) {
         width: 100%;
-        padding: 0 45px;
         text-align: center;
     }
 `
