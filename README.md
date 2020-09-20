@@ -1,5 +1,3 @@
-# Netflix
-
-## Netflix clone with react
+# Netflix clone with react
  
 ##  readme.me comming soon
