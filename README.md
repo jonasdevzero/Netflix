@@ -1,5 +1,5 @@
 # Netflix clone with React
  
- ## Netflix func
+ ## Netflix functional
  
 ##  readme.me comming soon
