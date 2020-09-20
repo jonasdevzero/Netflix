@@ -1,12 +1,12 @@
 import React from 'react'
 
 import Accordion from '../Accordion'
-import SignInForm from '../SignInForm'
+import SignUpForm from '../SignUpForm'
 
 function Faqs() {
     return (
         <Accordion>
-            <SignInForm />
+            <SignUpForm />
         </Accordion>
     )
 }

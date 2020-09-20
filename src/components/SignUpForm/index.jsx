@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Container, Input, Button, Text, Break } from './styles'
 
-function SignInForm() {
+function SignUpForm() {
     return (
         <Container>
             <Text>Ready to watch? Enter your email to create or restart your membersh</Text>
@@ -13,4 +13,4 @@ function SignInForm() {
     )
 }
 
-export default SignInForm
+export default SignUpForm
