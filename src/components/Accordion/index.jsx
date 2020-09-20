@@ -5,7 +5,7 @@ import faqsData from '../../assets/recurringQuestions.json'
 import Item from './Item'
 import { Container, Inner, Title, Frame } from './styles'
 
-function Accordion() {
+function Accordion({ children }) {
     return (
         <Container>
             <Inner>
@@ -18,6 +18,7 @@ function Accordion() {
                     })}
                 </Frame>
             </Inner>
+            {children}
         </Container>
     )
 }
