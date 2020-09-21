@@ -8,11 +8,11 @@ import Footer from '../components/Footer'
 function Home() {
     return (
         <>
-            <Header>
-                <Jumbotron />
-                <Faqs />
-                <Footer />
-            </Header>
+            <Header />
+            <Jumbotron />
+            <Faqs />
+            <Footer />
+
         </>
     )
 }
