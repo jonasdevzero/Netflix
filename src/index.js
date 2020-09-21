@@ -4,6 +4,7 @@ import { render } from 'react-dom';
 import 'normalize.css'
 
 import App from './App';
+import { firebase } from './lib/firebase.production'
 
 import { GlobalStyles } from './globalStyles'
 
