@@ -18,7 +18,7 @@ export const Input = styled.input`
     width: 100%;
     border: 0;
     padding: 10px;
-    height: 70px;
+    height: 50px;
     box-sizing: border-box;
     outline: none;
 
@@ -30,7 +30,7 @@ export const Input = styled.input`
 export const Button = styled.button`
     display: flex;
     align-items: center;
-    height: 70px;
+    height: 50px;
     background: #e50914;
     color: #fff;
     text-transform: uppercase;
