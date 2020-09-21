@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Accordion from '../Accordion'
-import SignUpForm from '../SignUpForm'
+import SignUpForm from '../EmailForm'
 
 function Faqs() {
     return (
