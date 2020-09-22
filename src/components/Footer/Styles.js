@@ -51,3 +51,14 @@ export const Break = styled.div`
     flex-basis: 100%;
     height: 0; 
 `
+
+export const  SignInFooterContainer = styled.div`
+    width: 100%;
+    display: flex;
+    background-color: #0009;
+    flex-direction: column;
+    margin-top: 40px;
+    padding-left: 10%;
+    padding-top: 20px;
+    padding-bottom: 50px;
+`
