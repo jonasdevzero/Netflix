@@ -30,9 +30,6 @@ function Header({ children, bg = true }) {
                     <ReactRouterLink to={ROUTES.HOME}>
                         <Logo src="/images/misc/logo.svg" alt="Netflix" />
                     </ReactRouterLink>
-                    <ButtonLink to={ROUTES.SIGN_IN}>
-                        Sign In
-                </ButtonLink>
                 </Container>
                 { children }
             </Background>

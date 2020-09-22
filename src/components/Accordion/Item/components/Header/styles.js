@@ -5,7 +5,8 @@ export const Header = styled.div `
     display: flex;
     justify-content: space-between;
     cursor: pointer;
-    margin-bottom: 8px;
+    margin-top: 8px;
+    margin-bottom: 1px;
     font-size: 26px;
     font-weight: normal;
     background: #303030;

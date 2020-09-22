@@ -2,8 +2,9 @@ import React from 'react'
 
 import { Container, Row, Column, Link, Title, Text, Break } from './Styles'
 
-function Footer() {
+function Footer({ signIn = false }) {
     return (
+        !signIn ?
         <Container>
             <Title>Questions? Contact us.</Title>
             <Break />
@@ -16,7 +17,7 @@ function Footer() {
                     <Link href="#">Netflix Origials</Link>
                 </Column>
                 <Column>
-                    <Link href="#">Help Centre</Link>
+                    <Link href="#">Help Center</Link>
                     <Link href="#">Jobs</Link>
                     <Link href="#">Terms of Use</Link>
                     <Link href="#">Contact Us</Link>
@@ -28,7 +29,7 @@ function Footer() {
                     <Link href="#">Speed Test</Link>
                 </Column>
                 <Column>
-                    <Link href="#">Media Centre</Link>
+                    <Link href="#">Media Center</Link>
                     <Link href="#">Buy Gift Cards</Link>
                     <Link href="#">Cookie Preferences</Link>
                     <Link href="#">Legal Notices</Link>
@@ -37,6 +38,8 @@ function Footer() {
             <Break />
             <Text>Netflix Brasil</Text>
         </Container>
+        :
+        <Container></Container>
     )
 }
 
