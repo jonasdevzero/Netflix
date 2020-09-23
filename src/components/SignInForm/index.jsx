@@ -3,8 +3,8 @@ import React, { useState } from 'react'
 import { Container, Form, Error, Title, Text, TextSmall, Link, Input, Submit } from './styles'
 
 function SignInForm() {
-    const [emailAddres, setEmailAddres] = useState()
-    const [password, setPassword] = useState()
+    const [emailAddres, setEmailAddres] = useState('')
+    const [password, setPassword] = useState('')
     const [error, setError] = useState('')
 
     const isInvalid = password === '' || emailAddres === ''
@@ -35,7 +35,10 @@ function SignInForm() {
                 />
                 <Submit disabled={isInvalid} type="submit">Sign In</Submit>
 
-                <Text>New to Netflix? <Link /> </Text>
+                <Text>New to Netflix? <Link to="/signup">Sign up now.</Link></Text>
+                <TextSmall>
+                    This page is protected by Google reCAPTCHA to ensure you're not a bot. Learn more.
+                </TextSmall>
             </Form>
         </Container>
     )
