@@ -1,10 +1,18 @@
 import React from 'react'
 
+import Header from '../components/Header'
+import SignInForm from '../components/SignInForm'
+import Footer from '../components/Footer'
+
 function Signin() {
     return (
-        <div>
-            <h1>Sign in</h1>
-        </div>
+        <>
+            <Header bg={false}>
+                <SignInForm />
+                <Footer signIn={true} />
+            </Header>
+
+        </>
     )
 }
 
