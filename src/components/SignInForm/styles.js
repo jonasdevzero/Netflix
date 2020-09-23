@@ -25,6 +25,7 @@ export const Error = styled.div`
     font-size: 14px;
     margin: 00 16px;
     padding: 15px 20px;
+    margin: 10px 0;
 `
 
 export const Title = styled.h1`
@@ -65,6 +66,7 @@ export const Input = styled.input`
     line-height: 50px;
     margin-bottom: 20px;
     outline: none;
+    padding-left: 15px; 
 
     &:last-of-type {
         margin-bottom: 30px;

@@ -1,8 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { useHistory } from 'react-router-dom'
+import { FirebaseContext } from '../../context/firebase'
+
+import * as ROUTES from '../../constants/routes'
 
 import { Container, Form, Error, Title, Text, TextSmall, Link, Input, Submit } from './styles'
 
 function SignInForm() {
+    const history = useHistory()
+    const { firebase } = useContext(FirebaseContext)
     const [emailAddres, setEmailAddres] = useState('')
     const [password, setPassword] = useState('')
     const [error, setError] = useState('')
@@ -12,7 +18,17 @@ function SignInForm() {
     const signinSubmit = event => {
         event.preventDefault()
 
-        // ...
+        firebase
+            .auth()
+            .signInWithEmailAndPassword(emailAddres, password)
+            .then(() => {
+                history.push(ROUTES.BROWSE)
+            })
+            .catch(error => {
+                setEmailAddres('')
+                setPassword('')
+                setError(error.message)
+            })
     }
 
     return (
@@ -22,6 +38,7 @@ function SignInForm() {
 
             <Form onSubmit={signinSubmit} method="POST">
                 <Input
+                    type="text"
                     placeholder="Email address"
                     value={emailAddres}
                     onChange={event => setEmailAddres(event.target.value)}
