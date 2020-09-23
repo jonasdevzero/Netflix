@@ -3,7 +3,7 @@ import { FirebaseContext } from '../context/firebase'
 
 function useContent(target) {
     const [content, setContent] = useState([])
-    const { firebase } = useContent(FirebaseContext)
+    const { firebase } = useContext(FirebaseContext)
 
     useEffect(_ => {
         firebase
@@ -22,10 +22,10 @@ function useContent(target) {
             })
             .catch(error => {
                 console.log(error.message)
-            })
-            
-            return { [target]: content }
+            })       
     }, [])
+
+    return { [target]: content }
 }
 
 export default useContent
