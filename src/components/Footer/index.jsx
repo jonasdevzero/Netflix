@@ -2,9 +2,9 @@ import React from 'react'
 
 import { Container, Row, Column, Link, Title, Text, Break, SignInFooterContainer } from './Styles'
 
-function Footer({ signIn = false }) {
+function Footer({ signInOrUp = false }) {
     return (
-        !signIn ?
+        !signInOrUp ?
             <Container>
                 <Title>Questions? Contact us.</Title>
                 <Break />

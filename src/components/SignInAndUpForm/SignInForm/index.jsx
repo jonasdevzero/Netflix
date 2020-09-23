@@ -1,31 +1,31 @@
 import React, { useState, useContext } from 'react'
 import { useHistory } from 'react-router-dom'
-import { FirebaseContext } from '../../context/firebase'
+import { FirebaseContext } from '../../../context/firebase'
 
-import * as ROUTES from '../../constants/routes'
+import * as ROUTES from '../../../constants/routes'
 
-import { Container, Form, Error, Title, Text, TextSmall, Link, Input, Submit } from './styles'
+import { Container, Form, Error, Title, Text, TextSmall, Link, Input, Submit } from '../styles'
 
 function SignInForm() {
     const history = useHistory()
     const { firebase } = useContext(FirebaseContext)
-    const [emailAddres, setEmailAddres] = useState('')
+    const [emailAddress, setEmailAddress] = useState('')
     const [password, setPassword] = useState('')
     const [error, setError] = useState('')
 
-    const isInvalid = password === '' || emailAddres === ''
+    const isInvalid = password === '' || emailAddress === ''
 
-    const signinSubmit = event => {
+    const signInSubmit = event => {
         event.preventDefault()
 
         firebase
             .auth()
-            .signInWithEmailAndPassword(emailAddres, password)
+            .signInWithEmailAndPassword(emailAddress, password)
             .then(() => {
                 history.push(ROUTES.BROWSE)
             })
             .catch(error => {
-                setEmailAddres('')
+                setEmailAddress('')
                 setPassword('')
                 setError(error.message)
             })
@@ -36,12 +36,12 @@ function SignInForm() {
             <Title>Sign In</Title> 
             {error && <Error>{error}</Error>}
 
-            <Form onSubmit={signinSubmit} method="POST">
+            <Form onSubmit={signInSubmit} method="POST">
                 <Input
                     type="text"
                     placeholder="Email address"
-                    value={emailAddres}
-                    onChange={event => setEmailAddres(event.target.value)}
+                    value={emailAddress}
+                    onChange={event => setEmailAddress(event.target.value)}
                 />
                 <Input
                     autoComplete="off"
