@@ -53,7 +53,6 @@ export const Break = styled.div`
 `
 
 export const  SignInFooterContainer = styled.div`
-    width: 100%;
     display: flex;
     background-color: #0009;
     flex-direction: column;
