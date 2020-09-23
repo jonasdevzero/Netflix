@@ -9,7 +9,7 @@ function Signin() {
         <>
             <Header bg={false}>
                 <SignInForm />
-                <Footer signIn={true} />
+                <Footer signInOrUp={true} />
             </Header>
 
         </>
