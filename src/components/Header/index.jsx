@@ -23,16 +23,18 @@ function Header({ children, bg = true }) {
                     <Subtitle>Watch any where, Cancel at any time.</Subtitle>
                     <SignUpForm />
                 </Feature>
-            </Background>
-            :
-            <Background>
-                <Container>
-                    <ReactRouterLink to={ROUTES.HOME}>
-                        <Logo src="/images/misc/logo.svg" alt="Netflix" />
-                    </ReactRouterLink>
-                </Container>
                 { children }
             </Background>
+            :
+
+            <Container>
+                <ReactRouterLink to={ROUTES.HOME}>
+                    <Logo src="/images/misc/logo.svg" alt="Netflix" />
+                </ReactRouterLink>
+                { children }
+            </Container>
+            
+
     )
 }
 
