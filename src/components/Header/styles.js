@@ -22,8 +22,12 @@ export const Container = styled.div`
 export const Background = styled.div`
     display: flex;
     flex-direction: column;
-    border-bottom: 8px solid #222;
+    border-bottom: ${({ src }) => src ? 'none' : '8px solid #222'};
     background: url(${({ src }) => src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg'}) top left / cover no-repeat ;
+
+    @media (max-width: 1100px) {
+        ${({ smallView }) => smallView && 'background: none'}
+    }
 `
 
 export const Logo = styled.img`
@@ -88,5 +92,116 @@ export const Subtitle = styled.h2`
 
     @media (max-width: 950px) {
         font-size: 18px;
+    }
+`
+
+export const FilmFeature = styled(Container)`
+    padding: 150px 0 550px 0;
+    flex-direction: column;
+    align-items: normal;
+    width: 50%;
+
+    @media (max-width: 1100px) {
+        display: none;
+    }
+`
+
+export const Text = styled.p`
+    font-size: 22px;
+    line-height: normal;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .45);
+    margin: 0;
+`
+
+export const FeatureCallOut = styled.h2`
+    font-size: 50px;
+    font-weight: bold;
+    line-height: normal;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .45);
+    margin: 0;
+    margin-bottom: 20px;
+`
+
+export const Link = styled.p`
+    color: #fff;
+    text-decoration: none;
+    margin-right: 30px;
+    font-weight: ${({ active }) => active === 'true' ? '700' : 'normal'};
+    cursor: pointer;
+
+    &:hover {
+        font-weight: bold;
+    }
+
+    &:last-of-type {
+        margin-right: 0;
+    } 
+`
+
+export const Group = styled.div`
+    display: flex;
+    align-items: center;
+`
+
+export const Picture = styled.button`
+    background: url(${({ src }) => `/images/users/${src}.png`});
+    background-size: contain;
+    border: 0;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    margin-right: 5px;
+`
+
+export const Dropdown = styled.div`
+    display: none;
+    background-color: #000;
+    position: absolute;
+    padding: 10px;
+    width: 100px;
+    top: 32px;
+    right: 10px;
+
+    &:hover {
+        display: flex;
+        flex-direction: column;
+    }
+
+    ${Group}:last-of-type ${Link} {
+        cursor: pointer;
+    }
+
+    ${Group} {
+        margin-bottom: 10px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        ${Link}, ${Picture} {
+            cursor: default;
+        }
+
+        p {
+            font-size: 12px;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+    }
+`
+
+export const Profile = styled.div`
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    position: relative;
+
+    button {
+        cursor: pointer;
+    }
+
+    &:hover > ${Dropdown} {
+        display: flex;
+        flex-direction: column;
     }
 `
