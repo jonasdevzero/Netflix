@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link as ReactRouterLink } from 'react-router-dom'
 
 import * as ROUTES from '../../constants/routes'
@@ -27,9 +27,7 @@ import {
 
 import SignUpForm from '../EmailForm'
 
-function Header({ children, bg = true, src, browser = false, user, firebase, search, setSearch, category, setCategory }) {
-    const [searchActive, setSearchActive] = useState(false)
-
+function Header({ children, src, browser = false, bg = true }) {
     return (
         browser ?
             (
@@ -108,6 +106,10 @@ Header.Dropdown = function HeaderDropdown({ children, ...rest }) {
 
 Header.Feature = function HeaderFeature({ children, ...rest }) {
     return <Feature {...rest}>{children}</Feature>
+}
+
+Header.FilmFeature = function HeaderFilmFeature({ children, ...rest }) {
+    return <FilmFeature {...rest}>{children}</FilmFeature>
 }
 
 Header.FeatureCallOut = function HeaderFeatureCallOut({ children, ...rest }) {
