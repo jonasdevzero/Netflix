@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Browse as BrowseComponent } from '../components/Browse'
+import BrowseComponent from '../components/Browse'
 
 import useContent from '../hooks/useContent'
 import filterData from '../utils/filterData'

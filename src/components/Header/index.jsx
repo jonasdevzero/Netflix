@@ -124,4 +124,8 @@ Header.PlayButton = function HeaderPlayButton({ children, ...rest }) {
     return <PlayButton {...rest}>{children}</PlayButton>
 }
 
+Header.Logo = function HeaderLogo({ ...rest }) {
+    return <Logo {...rest} />
+}
+
 export default Header
