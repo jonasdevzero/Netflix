@@ -1,10 +1,17 @@
 import React from 'react'
 
+import { Browse as BrowseComponent } from '../components/Browse'
+
+import useContent from '../hooks/useContent'
+import filterData from '../utils/filterData'
+
 function Browse() {
+    const { series } = useContent('series')
+    const { films } = useContent('films')
+    const slides = filterData({ series, films })
+
     return (
-        <div>
-            <h1>Browse</h1>
-        </div>
+        <BrowseComponent slides />
     )
 }
 
