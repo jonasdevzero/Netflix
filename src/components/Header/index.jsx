@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link as ReactRouterLink } from 'react-router-dom'
 
 import * as ROUTES from '../../constants/routes'
@@ -18,14 +18,20 @@ import {
         Group,
         Picture,
         Dropdown,
-        Profile
+        Profile,
+        Search,
+        SearchIcon,
+        SearchInput,
+        PlayButton
     } from './styles'
 
 import SignUpForm from '../EmailForm'
 
-function Header({ children, bg = true, src, user, firebase }) {
+function Header({ children, bg = true, src, browser = false, user, firebase, search, setSearch }) {
+    const [searchActive, setSearchActive] = useState(false)
+
     return (
-        src ?
+        browser ?
             (
                 <Background src={src} smallView>
                     <Container>
@@ -37,6 +43,12 @@ function Header({ children, bg = true, src, user, firebase }) {
                             <Link>Films</Link>
                         </Group>
                         <Group>
+                            <Search>
+                                <SearchIcon onClick={_ => setSearchActive(!searchActive)}>
+                                    <img src="/images/icons/search.png" alt="Search"/>
+                                </SearchIcon>
+                                <SearchInput value={search} onChange={e => setSearch(e.target.value)} placeholder="Search" active={searchActive} />
+                            </Search>
                             <Profile>
                                 <Picture src={user.photoURL} />
                                 <Dropdown>
@@ -59,6 +71,7 @@ function Header({ children, bg = true, src, user, firebase }) {
                             City. Arthur wears two masks -- the one he paints for his day job as a clown, and the guise he projects in a
                             futile attempt to feel like he's part of the world around him.
                             </Text>
+                            <PlayButton>Play</PlayButton>
                     </FilmFeature>
                 </Background>
             )

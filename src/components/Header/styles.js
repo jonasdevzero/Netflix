@@ -205,3 +205,61 @@ export const Profile = styled.div`
         flex-direction: column;
     }
 `
+
+export const Search = styled.div`
+    display: flex;
+    align-items: center;
+
+    svg {
+        color: #fff;
+        cursor: pointer;
+    }
+
+    @media (max-width: 700px) {
+        display: none;
+    }
+`
+
+export const SearchIcon = styled.button`
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+
+    img {
+        filter: brightness(0) invert(1);
+        width: 16px;
+    }
+`
+
+export const SearchInput = styled.input`
+    background: #44444459;
+    transition: width .5s;
+    height: 30px;
+    font-size: 14px;
+    outline: none;
+    margin-left: ${({ active }) => active === true ? '10px' : 'o'};
+    width: ${({ active }) => active === true ? '200px' : '0px'};
+    padding: ${({ active }) => active === true ? '0 10px' : '0px'};
+    opacity: ${({ active }) => active === true ? '1' : '0'};
+`
+
+export const PlayButton = styled.button`
+    border: none;
+    outline: none;
+    box-shadow: 0 .6vw 1vw -.4vw rgba(0, 0, 0, .35);
+    background-color: #e6e6e6;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    max-width: 110px;
+    margin-top: 35px;
+    cursor: pointer;
+    transition: background-color .5 ease;
+
+    &:hover {
+        background: #ff1e1e;
+        color: #fff;
+    }
+`
