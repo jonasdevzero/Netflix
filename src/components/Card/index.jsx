@@ -75,4 +75,28 @@ Card.Image = function CardImage({ ...restProps }) {
     return <Image {...restProps} />;
 };
 
+Card.Feature = function CardFeature({ children, category, ...restProps }) {
+    const { showFeature, itemFeature, setShowFeature } = useContext(FeatureContext)
+
+    return showFeature ?
+        <Feature {...restProps} src={`/images/category/${category}/${itemFeature.genre}/${itemFeature.slug}/large.jpg`}>
+            <Content>
+                <FeatureTitle>{itemFeature.title}</FeatureTitle>
+                <FeatureText>{itemFeature.description}</FeatureText>
+                <FeatureClose onClick={_ => setShowFeature(false)}>
+                    <img src="/images/icons/close.png" alt="Close" />
+                </FeatureClose>
+            </Content>
+
+            <Group margin="30px 0px" flexDirection="row" alignItems="center">
+                <Maturity reatin={itemFeature.maturity}>{itemFeature.maturity < 12 ? 'PG' : itemFeature.maturity}</Maturity>
+                <FeatureText fontWeight="bold">
+                    {itemFeature.genre.charAt(0).toUpperCase() + itemFeature.genre.slice(1)}
+                </FeatureText>
+            </Group>
+        </Feature>
+        :
+        null
+}
+
 export default Card
