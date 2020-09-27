@@ -24,17 +24,12 @@ function BrowseComponent({ children }) {
     const [loading, setLoading] = useState(true)
     const [profile, setProfile] = useState({})
     const [category, setCategory] = useState('series')
-    const [slideRows, setSlideRows] = useState([])
 
     useEffect(_ => {
         setTimeout(() => {
             setLoading(false)
         }, 3000)
     }, [profile.displayName])
-
-    useEffect(_ => {
-        setSlideRows(slides[category])
-    }, [slides, category])
 
     return profile.displayName ?
         <>
@@ -82,7 +77,7 @@ function BrowseComponent({ children }) {
             </Header>
 
             <Card.Group>
-                {slideRows.map(item => (
+                {slides[category].map(item => (
                     <Card key={`${item.category}-${item.title.toLowerCase()}`}>
                         <Card.Title>{item.title}</Card.Title>
                         <Card.Entities>
