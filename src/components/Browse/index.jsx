@@ -4,13 +4,20 @@ import { Link as ReactRouterLink } from 'react-router-dom'
 import Profiles from '../Profiles'
 import Loading from '../Loading'
 import Header from '../Header'
+import Card from '../Card'
 
 import * as ROUTES from '../../constants/routes'
 import { FirebaseContext } from '../../context/firebase'
+import useContent from '../../hooks/useContent'
+import filterData from '../../utils/filterData'
 
-function BrowseComponent({ children, slides }) {
+function BrowseComponent({ children }) {
     const { firebase } = useContext(FirebaseContext)
     const user = firebase.auth().currentUser || {}
+
+    const { series } = useContent('series')
+    const { films } = useContent('films')
+    const slides = filterData({ series, films })
 
     const [search, setSearch] = useState('')
     const [searchActive, setSearchActive] = useState(false)
@@ -73,6 +80,31 @@ function BrowseComponent({ children, slides }) {
                     <Header.PlayButton>Play</Header.PlayButton>
                 </Header.FilmFeature>
             </Header>
+
+            <Card.Group>
+                {slideRows.map(item => (
+                    <Card key={`${item.category}-${item.title.toLowerCase()}`}>
+                        <Card.Title>{item.title}</Card.Title>
+                        <Card.Entities>
+                            {item.data.map(contentItem => (
+                                <Card.Item key={contentItem.docId} item={contentItem}>
+                                    <Card.Image src={`/images/${category}/${contentItem.genre}/${contentItem.slug}/small.jpg`} />
+                                    <Card.Meta>
+                                        <Card.SubTitle>{contentItem.title}</Card.SubTitle>
+                                        <Card.Text>{contentItem.description}</Card.Text>
+                                    </Card.Meta>
+                                </Card.Item>
+                            ))}
+                        </Card.Entities>
+                        {/* <Card.Feature category={category}>
+                                <Player>
+                                    <Player.Button />
+                                    <Player.Video src="/videos/bunny.mp4" />
+                                </Player>
+                        </Card.Feature> */}
+                    </Card>
+                ))}
+            </Card.Group>
         </>
         :
         <Profiles user={user} setProfile={setProfile} />
