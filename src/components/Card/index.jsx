@@ -1,7 +1,5 @@
 import React, { useState, useContext, createContext } from 'react'
 
-export const FeatureContext = createContext()
-
 import {
     Container,
     Group,
@@ -9,6 +7,7 @@ import {
     Subtitle,
     Meta,
     Item,
+    Text,
     Feature,
     FeatureTitle,
     FeatureText,
@@ -19,8 +18,10 @@ import {
     Image
 } from './styles'
 
+export const FeatureContext = createContext()
 
-function Card({ slideRows, category }) {
+
+function Card({ children, slideRows, category, ...restProps }) {
     const [showFeature, setShowFeature] = useState(false)
     const [itemFeature, setItemFeature] = useState({})
 
