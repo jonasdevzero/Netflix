@@ -86,14 +86,15 @@ Card.Feature = function CardFeature({ children, category, ...restProps }) {
                 <FeatureClose onClick={_ => setShowFeature(false)}>
                     <img src="/images/icons/close.png" alt="Close" />
                 </FeatureClose>
-            </Content>
 
-            <Group margin="30px 0px" flexDirection="row" alignItems="flex-end" >
-                <Maturity rating={itemFeature.maturity}>{itemFeature.maturity < 12 ? 'PG' : itemFeature.maturity}</Maturity>
-                <FeatureText fontWeight="bold">
-                    {itemFeature.genre.charAt(0).toUpperCase() + itemFeature.genre.slice(1)}
-                </FeatureText>
-            </Group>
+
+                <Group margin="30px 0px" flexDirection="row" alignItems="flex-end" >
+                    <Maturity rating={itemFeature.maturity}>{itemFeature.maturity < 12 ? 'PG' : itemFeature.maturity}</Maturity>
+                    <FeatureText fontWeight="bold">
+                        {itemFeature.genre.charAt(0).toUpperCase() + itemFeature.genre.slice(1)}
+                    </FeatureText>
+                </Group>
+            </Content>
         </Feature>
         :
         null

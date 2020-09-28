@@ -115,7 +115,6 @@ export const Image = styled.img`
 
 export const FeatureText = styled.p`
     margin: 0;
-    height: 50px;
     display: flex;
     align-items: center;
 
@@ -155,8 +154,8 @@ export const Feature = styled.div`
         }
 
         ${Group} {
-            align-items: flex-end;
-            margin-top: 0px;
+            align-items: center;
+            margin-top: 10px;
         }
     }
 `
@@ -188,7 +187,7 @@ export const Maturity = styled.div`
     border-radius: 3px;
     width: 30px;
     height: 30px;
-    margin: 10px;
+    margin-right: 5px;
 `
 
 export const Content = styled.div`
