@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
 import { Link as ReactRouterLink } from 'react-router-dom'
 
@@ -151,6 +151,7 @@ export const Picture = styled.button`
     height: 32px;
     cursor: pointer;
     margin-right: 5px;
+    outline: none;
 `
 
 export const Dropdown = styled.div`
@@ -256,7 +257,7 @@ export const PlayButton = styled.button`
     max-width: 110px;
     margin-top: 35px;
     cursor: pointer;
-    transition: background-color .5 ease;
+    transition: background-color .5s ease;
 
     &:hover {
         background: #ff1e1e;
