@@ -27,7 +27,7 @@ import {
 
 import SignUpForm from '../EmailForm'
 
-function Header({ children, src, browser = false, bg = true }) {
+function Header({ children, src, browser = false, form = true }) {
     return (
         browser ?
             (
@@ -37,7 +37,7 @@ function Header({ children, src, browser = false, bg = true }) {
             )
             :
             (
-                bg ?
+                form ?
                     <Background>
                         <Container>
                             <ReactRouterLink to={ROUTES.HOME}>
@@ -55,12 +55,14 @@ function Header({ children, src, browser = false, bg = true }) {
                         {children}
                     </Background>
                     :
-                    <Container>
-                        <ReactRouterLink to={ROUTES.HOME}>
-                            <Logo src="/images/misc/logo.svg" alt="Netflix" />
-                        </ReactRouterLink>
+                    <Background>
+                        <Container>
+                            <ReactRouterLink to={ROUTES.HOME}>
+                                <Logo src="/images/misc/logo.svg" alt="Netflix" />
+                            </ReactRouterLink>
+                        </Container>
                         {children}
-                    </Container>
+                    </Background>
             )
 
 

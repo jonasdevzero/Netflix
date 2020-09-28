@@ -6,10 +6,12 @@ import Footer from '../components/Footer'
 
 function Signup() {
     return (
-        <Header bg={false}>
-            <SignUpForm />
+        <>
+            <Header form={false}>
+                <SignUpForm />
+            </Header>
             <Footer signInOrUp={true} />
-        </Header>
+        </>
     )
 }
 

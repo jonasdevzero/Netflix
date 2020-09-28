@@ -10,6 +10,7 @@ export const Container = styled.div`
     padding: 60px 68px 40px;
     border-radius: 5px;
     min-height: 560px;
+    margin-bottom: 50px;
 `
 
 export const Form = styled.form`
