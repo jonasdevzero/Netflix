@@ -27,45 +27,13 @@ export const Inner = styled.div`
     }
 `
 
-export const Close = styled.button`
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    width: 22px;
-    height: 20px;
-    opacity: .3;
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;
-
-    &:hover {
-        opacity: 1;
-    }
-
-    &:before, &:after {
-        position: absolute;
-        left: 10px;
-        top: 0;
-        content: "";
-        height: 22px;
-        width: 22px;
-    }
-
-    &:before {
-        transform: rotate(45deg);
-    }
-
-    &:after {
-        transform: rotate(-45deg);
-    }
-`
-
 export const Button = styled.button`
     background-color: #e50914;
     border-color: #ff0a10;
     width: 114px;
     height: 45px;
     font-weight: bold;
+    color: #fff;
     text-transform: uppercase;
     font-size: 18px;
     cursor: pointer;
@@ -73,6 +41,7 @@ export const Button = styled.button`
     align-items: center;
     justify-content: center;
     padding-left: 0;
+    margin-top: 5px;
 
     &:hover {
         transform: scale(1.05);
