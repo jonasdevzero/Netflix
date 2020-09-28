@@ -5,6 +5,7 @@ import Profiles from '../Profiles'
 import Loading from '../Loading'
 import Header from '../Header'
 import Card from '../Card'
+import Footer from '../Footer'
 
 import * as ROUTES from '../../constants/routes'
 import { FirebaseContext } from '../../context/firebase'
@@ -100,6 +101,7 @@ function BrowseComponent({ children }) {
                     </Card>
                 ))}
             </Card.Group>
+            <Footer />
         </>
         :
         <Profiles user={user} setProfile={setProfile} />
