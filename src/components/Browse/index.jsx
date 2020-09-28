@@ -6,6 +6,7 @@ import Loading from '../Loading'
 import Header from '../Header'
 import Card from '../Card'
 import Footer from '../Footer'
+import Player from '../Player'
 
 import * as ROUTES from '../../constants/routes'
 import { FirebaseContext } from '../../context/firebase'
@@ -93,10 +94,11 @@ function BrowseComponent({ children }) {
                             ))}
                         </Card.Entities>
                         <Card.Feature category={category}>
-                                {/* <Player>
-                                    <Player.Button />
-                                    <Player.Video src="/videos/bunny.mp4" />
-                                </Player> */}
+                            <Player>
+                                
+                                <Player.Button />
+                                <Player.Video src="/videos/bunny.mp4" />
+                            </Player>
                         </Card.Feature>
                     </Card>
                 ))}
