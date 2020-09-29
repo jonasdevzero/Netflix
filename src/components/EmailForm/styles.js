@@ -17,7 +17,7 @@ export const Input = styled.input`
     max-width: 450px;
     width: 100%;
     border: 0;
-    padding: 10px;
+    padding: 30px 10px;
     height: 50px;
     box-sizing: border-box;
     outline: none;
@@ -25,12 +25,16 @@ export const Input = styled.input`
     &:focus {
         border: 1px solid dodgerblue; 
     }
+
+    @media (max-width: 740px) {
+        padding: 10px;
+    }
 `
 
 export const Button = styled.button`
     display: flex;
     align-items: center;
-    height: 50px;
+    height: 60px;
     background: #e50914;
     color: #fff;
     text-transform: uppercase;
@@ -49,6 +53,10 @@ export const Button = styled.button`
         margin-top: 20px;
         font-size: 16px;
         font-weight: bold; 
+    }
+
+    @media  (max-width: 740px) {
+        height: 40px;
     }
 
     img {
