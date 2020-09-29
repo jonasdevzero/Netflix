@@ -31,8 +31,8 @@ export const Background = styled.div`
 `
 
 export const Logo = styled.img`
-    width: 108px;
-    height: 32px;
+    width: 158px;
+    height: 72px;
     margin-right: 40px;
 
     @media (min-width: 1449px) {

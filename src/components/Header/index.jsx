@@ -27,7 +27,7 @@ import {
 
 import SignUpForm from '../EmailForm'
 
-function Header({ children, src, browse = false, form = true, profile = false }) {
+function Header({ children, src, browse = false, emailForm = true, profile = false }) {
     return (
         browse ?
             (
@@ -44,7 +44,7 @@ function Header({ children, src, browse = false, form = true, profile = false })
             )
             :
             (
-                form ?
+                emailForm ?
                     <Background>
                         <Container>
                             <ReactRouterLink to={ROUTES.HOME}>

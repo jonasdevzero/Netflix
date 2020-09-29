@@ -33,6 +33,10 @@ export const Link = styled.a`
     text-decoration: none;
     font-size: 13px;
     margin-bottom: 28px;
+
+    &:hover {
+        text-decoration: underline;
+    }
 `
 
 export const Title = styled.div`
@@ -54,7 +58,7 @@ export const Break = styled.div`
 
 export const  SignInFooterContainer = styled.div`
     display: flex;
-    background-color: #0009;
+    background-color: ${({ signInOrUp }) => signInOrUp ? '#00000075' : '#0009'};
     flex-direction: column;
     margin-top: 40px;
     padding-left: 10%;

@@ -39,7 +39,7 @@ function Footer({ signInOrUp = false }) {
                 <Text>Netflix Brasil</Text>
             </Container>
             :
-            <SignInFooterContainer>
+            <SignInFooterContainer signInOrUp={signInOrUp}>
                 <Title>Questions? Contact us.</Title>
                 <Break />
                 <Row>

@@ -7,11 +7,12 @@ import Footer from '../components/Footer'
 function Signin() {
     return (
         <>
-            <Header form={false}>
+            <Header emailForm={false}>
                 <SignInForm />
+                <Footer signInOrUp={true} />
             </Header>
             
-            <Footer signInOrUp={true} />
+           
         </>
     )
 }
