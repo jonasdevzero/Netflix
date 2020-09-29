@@ -10,14 +10,14 @@
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
 * [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
+* [knowledge acquired.](#knowledge-acquired)
 
 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-More soon...
+This project is a netflix clone created with react, firebase and styled-components. contains four pages: home, signin, signup and browse. signin and signup methods, auth routes. custom hooks, compound components disgn pattern, and more!!!. If you want do this project from scratch, accsses this video: https://www.youtube.com/watch?v=x_EEwGe-a9o.
 
 ### Built With
 * [React](https://reactjs.org/)
@@ -29,7 +29,7 @@ More soon...
 
 <!-- GETTING STARTED -->
 ## Getting Started
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple example steps or accsses this video for more details: /- comming soon -/ .
 
 ### Prerequisites
 * npm
@@ -46,7 +46,7 @@ git clone https://github.com/jonasdevzero/Netflix.git
 ```sh
 npm install
 ```
-4. Configure Firebase
+4. Configure Firebase in the lib folder
 ```JS
   import Firebase from 'firebase'
   import 'firebase/firestore'
@@ -76,12 +76,19 @@ Contributions are welcome :smile:
 <!-- CONTACT -->
 ## Contact
 
-Jonas de Oliveira - jonasdevzero@gmail.com
+Email  [![Gmail Badge](https://img.shields.io/badge/-jonasdevzero@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:jonasdevzero@gmail.com)](mailto:jonasdevzero@gmail.com)
 
-Project Link: [https://github.com/jonasdevzero/Netflix](https://github.com/jonasdevzero/Netflix)
+LinkdeIn  [![Linkedin Badge](https://img.shields.io/badge/-Jonas%20%20de%20Oliveira-blue?style=flatsquare&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/jonas-de-oliveira-0561961ab/)](https://www.linkedin.com/in/jonas-de-oliveira-0561961ab/)  
+
+
 
 
 
 <!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-More soon...
+## knowledge acquired.
+
+- Auth routes
+- Styled-components
+- React hooks: useEffect, useHistory, createContext, useContext.
+- Custom hooks
+- Compound components design pattern
