@@ -1,5 +1,7 @@
 <h1 align="center">Netflix clone with React</h1>
-<img src="https://github.com/jonasdevzero/Netflix/blob/master/public/images/misc/presentationImageForGitHub.png" alt="image presentation" align="center" />
+<img src="https://github.com/jonasdevzero/Netflix/blob/master/readmeFiles/presentationImageForGitHub.png" alt="image presentation" align="center" />
+<img src="https://github.com/jonasdevzero/Netflix/blob/master/readmeFiles/presentation-part1.gif" alt="gif presentation part 1" align="center" />
+<img src="https://github.com/jonasdevzero/Netflix/blob/master/readmeFiles/presentation-part2.gif" alt="gif presentation part 2" align="center" />
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
