@@ -40,7 +40,7 @@ function BrowseComponent({ children }) {
                 <Header.Container>
                     <Header.Group>
                         <ReactRouterLink to={ROUTES.HOME}>
-                            <Header.Logo src="/images/misc/logo.svg" alt="Netflix" />
+                            <Header.Logo width="92px" height="31px" src="/images/misc/logo.svg" alt="Netflix" />
                         </ReactRouterLink>
                         <Header.Link active={category === 'series' ? 'true' : 'false'} onClick={_ => setCategory('series')}>Series</Header.Link>
                         <Header.Link active={category === 'films' ? 'true' : 'false'} onClick={_ => setCategory('films')}>Films</Header.Link>

@@ -30,18 +30,18 @@ export const Inner = styled.div`
 export const Button = styled.button`
     background-color: #e50914;
     border-color: #ff0a10;
-    width: 114px;
-    height: 45px;
+    width: 110px;
+    height: 40px;
     font-weight: bold;
     color: #fff;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     padding-left: 0;
-    margin-top: 5px;
+    margin-top: 10px;
 
     &:hover {
         transform: scale(1.05);

@@ -4,11 +4,12 @@ import { Link as ReactRouterLink } from 'react-router-dom'
 
 export const Container = styled.div`
     display: flex;
-    margin: 0 30px;
+    margin: 0 40px;
     height: 64px;
-    padding: 18px 0;
+    padding-bottom: 18px;
     justify-content: space-between;
     align-items: center;
+    
 
     a {
         display: flex;

@@ -34,7 +34,7 @@ function Header({ children, src, browse = false, emailForm = true, profile = fal
                 profile ?
                     <Container>
                         <ReactRouterLink to={ROUTES.HOME}>
-                            <Logo src="/images/misc/logo.svg" alt="Netflix" />
+                            <Logo width="92px" height="31px;" src="/images/misc/logo.svg" alt="Netflix" />
                         </ReactRouterLink>
                     </Container>
                     :
