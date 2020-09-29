@@ -76,11 +76,11 @@ Contributions are welcome :smile:
 <!-- CONTACT -->
 ## Contact
 
-Email - jonasdevzero@gmail.com
+Email  [![Gmail Badge](https://img.shields.io/badge/-jonasdevzero@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:jonasdevzero@gmail.com)](mailto:jonasdevzero@gmail.com)
 
-LinkedIn - https://www.linkedin.com/in/jonas-de-oliveira-0561961ab/
+LinkdeIn  [![Linkedin Badge](https://img.shields.io/badge/-Jonas%20%20de%20Oliveira-blue?style=flatsquare&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/jonas-de-oliveira-0561961ab/)](https://www.linkedin.com/in/jonas-de-oliveira-0561961ab/)  
 
-Project Link: [https://github.com/jonasdevzero/Netflix](https://github.com/jonasdevzero/Netflix)
+
 
 
 
