@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react'
 import { Link as ReactRouterLink } from 'react-router-dom'
+import Fuse from 'fuse.js'
 
 import Profiles from '../Profiles'
 import Loading from '../Loading'
@@ -19,19 +20,32 @@ function BrowseComponent({ children }) {
 
     const { series } = useContent('series')
     const { films } = useContent('films')
-    const slides = filterData({ series, films })
+    let slides = filterData({ series, films })
 
     const [search, setSearch] = useState('')
     const [searchActive, setSearchActive] = useState(false)
     const [loading, setLoading] = useState(true)
     const [profile, setProfile] = useState({})
     const [category, setCategory] = useState('series')
+    const [searchFiltered, setSearchFiltered] = useState([])
 
     useEffect(_ => {
         setTimeout(() => {
             setLoading(false)
         }, 3000)
     }, [profile.displayName])
+
+    useEffect(_ => {
+        const fuse = new Fuse(slides[category], { keys: ['data.title', 'data.genre'], })
+
+        const results = fuse.search(search).map(({ item }) => item)
+
+        if (slides[category].length > 0 && search.length > 3 && results.length > 0) {
+            setSearchFiltered(results)
+        } else {
+            setSearchFiltered([])
+        }
+    }, [search])
 
     return profile.displayName ?
         <>
@@ -79,28 +93,54 @@ function BrowseComponent({ children }) {
             </Header>
 
             <Card.Group>
-                {slides[category].map(item => (
-                    <Card key={`${item.category}-${item.title.toLowerCase()}`}>
-                        <Card.Title>{item.title}</Card.Title>
-                        <Card.Entities>
-                            {item.data.map(contentItem => (
-                                <Card.Item key={contentItem.docId} item={contentItem}>
-                                    <Card.Image src={`/images/${category}/${contentItem.genre}/${contentItem.slug}/small.jpg`} />
-                                    <Card.Meta>
-                                        <Card.SubTitle>{contentItem.title}</Card.SubTitle>
-                                        <Card.Text>{contentItem.description}</Card.Text>
-                                    </Card.Meta>
-                                </Card.Item>
-                            ))}
-                        </Card.Entities>
-                        <Card.Feature category={category}>
-                            <Player>
-                                <Player.Button />
-                                <Player.Video src="/videos/bunny.mp4" />
-                            </Player>
-                        </Card.Feature>
-                    </Card>
-                ))}
+                {searchFiltered.length > 0 ?
+                    searchFiltered.map(item => (
+                        <Card key={`${item.category}-${item.title.toLowerCase()}`}>
+                            <Card.Title>{item.title}</Card.Title>
+                            <Card.Entities>
+                                {item.data.map(contentItem => (
+                                    <Card.Item key={contentItem.docId} item={contentItem}>
+                                        <Card.Image src={`/images/${category}/${contentItem.genre}/${contentItem.slug}/small.jpg`} />
+                                        <Card.Meta>
+                                            <Card.SubTitle>{contentItem.title}</Card.SubTitle>
+                                            <Card.Text>{contentItem.description}</Card.Text>
+                                        </Card.Meta>
+                                    </Card.Item>
+                                ))}
+                            </Card.Entities>
+                            <Card.Feature category={category}>
+                                <Player>
+                                    <Player.Button />
+                                    <Player.Video src="/videos/bunny.mp4" />
+                                </Player>
+                            </Card.Feature>
+                        </Card>
+                    ))
+                    :
+                    slides[category].map(item => (
+                        <Card key={`${item.category}-${item.title.toLowerCase()}`}>
+                            <Card.Title>{item.title}</Card.Title>
+                            <Card.Entities>
+                                {item.data.map(contentItem => (
+                                    <Card.Item key={contentItem.docId} item={contentItem}>
+                                        <Card.Image src={`/images/${category}/${contentItem.genre}/${contentItem.slug}/small.jpg`} />
+                                        <Card.Meta>
+                                            <Card.SubTitle>{contentItem.title}</Card.SubTitle>
+                                            <Card.Text>{contentItem.description}</Card.Text>
+                                        </Card.Meta>
+                                    </Card.Item>
+                                ))}
+                            </Card.Entities>
+                            <Card.Feature category={category}>
+                                <Player>
+                                    <Player.Button />
+                                    <Player.Video src="/videos/bunny.mp4" />
+                                </Player>
+                            </Card.Feature>
+                        </Card>
+                    ))
+                
+                }
             </Card.Group>
             <Footer />
         </>
