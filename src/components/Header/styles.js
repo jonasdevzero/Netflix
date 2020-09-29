@@ -4,7 +4,7 @@ import { Link as ReactRouterLink } from 'react-router-dom'
 
 export const Container = styled.div`
     display: flex;
-    margin: 0 56px;
+    margin: 0 30px;
     height: 64px;
     padding: 18px 0;
     justify-content: space-between;
@@ -31,13 +31,15 @@ export const Background = styled.div`
 `
 
 export const Logo = styled.img`
-    width: 158px;
-    height: 72px;
+    /* width: 158px;
+    height: 72px; */
+    width: ${({ width }) => width ? width : '167px'};
+    height: ${({ height }) => height ? height : '45px'};
     margin-right: 40px;
 
     @media (min-width: 1449px) {
-        height: 45px;
-        width: 167px;
+        height: 95px;
+        width: 207px;
     }
 `
 

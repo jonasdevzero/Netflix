@@ -9,7 +9,6 @@ export const Container = styled.div `
 `
 export const Inner = styled.div `
     display: flex;
-    padding: 70px 45px 0px 45px;
     flex-direction: column;
     max-width: 815px;
     width: 75%;

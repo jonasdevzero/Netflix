@@ -48,7 +48,7 @@ function Header({ children, src, browse = false, emailForm = true, profile = fal
                     <Background>
                         <Container>
                             <ReactRouterLink to={ROUTES.HOME}>
-                                <Logo src="/images/misc/logo.svg" alt="Netflix" />
+                                <Logo width="132px" height="36px" src="/images/misc/logo.svg" alt="Netflix" />
                             </ReactRouterLink>
                             <ButtonLink to={ROUTES.SIGN_IN}>
                                 Sign In
