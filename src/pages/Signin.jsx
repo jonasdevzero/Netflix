@@ -12,7 +12,6 @@ function Signin() {
             </Header>
             
             <Footer signInOrUp={true} />
-
         </>
     )
 }

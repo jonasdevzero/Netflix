@@ -27,13 +27,20 @@ import {
 
 import SignUpForm from '../EmailForm'
 
-function Header({ children, src, browser = false, form = true }) {
+function Header({ children, src, browse = false, form = true, profile = false }) {
     return (
-        browser ?
+        browse ?
             (
-                <Background src={src} smallView>
-                    {children}
-                </Background>
+                profile ?
+                    <Container>
+                        <ReactRouterLink to={ROUTES.HOME}>
+                            <Logo src="/images/misc/logo.svg" alt="Netflix" />
+                        </ReactRouterLink>
+                    </Container>
+                    :
+                    <Background src={src} smallView>
+                        {children}
+                    </Background>
             )
             :
             (

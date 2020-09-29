@@ -26,7 +26,6 @@ function App() {
           <Home />
         </IsUserRedirect>
       </Switch>
-
     </Router>
   );
 }

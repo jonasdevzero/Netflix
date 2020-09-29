@@ -36,7 +36,7 @@ function BrowseComponent({ children }) {
     return profile.displayName ?
         <>
             {loading ? <Loading src={user.photoURL} /> : <Loading.ReleaseBody />}
-            <Header src="joker1" bg={false} browser={true}>
+            <Header src="joker1" browse="true">
                 <Header.Container>
                     <Header.Group>
                         <ReactRouterLink to={ROUTES.HOME}>

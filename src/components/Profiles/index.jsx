@@ -6,7 +6,7 @@ import { Container, Title, List, Item, Picture, Name } from './styles'
 function Profiles({ user, setProfile }) {
     return (
         <>
-            <Header bg={false} />
+            <Header browse={true} profile={true} />
             <Container>
                 <Title>Who´s watching?</Title>
                 <List>
