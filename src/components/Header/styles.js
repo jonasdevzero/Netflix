@@ -32,15 +32,14 @@ export const Background = styled.div`
 `
 
 export const Logo = styled.img`
-    /* width: 158px;
-    height: 72px; */
     width: ${({ width }) => width ? width : '167px'};
     height: ${({ height }) => height ? height : '45px'};
-    margin-right: 40px;
+    margin: ${({ margin }) => margin ? margin : '30px 25px 0px 25px'};
+    margin-right: ${({ margin }) => margin ? '25px' : '25px'};
 
-    @media (min-width: 1449px) {
-        height: 95px;
-        width: 207px;
+    @media (max-width: 740px) {
+        width: 112px;
+        height: 51px;
     }
 `
 
@@ -57,6 +56,7 @@ export const ButtonLink = styled(ReactRouterLink)`
     cursor: pointer;
     text-decoration: none;
     box-sizing: border-box;
+    margin-top: auto;
 
     &:hover {
         background-color: #f40612;
@@ -67,7 +67,7 @@ export const Feature = styled.div`
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 140px 45px;
+    padding: 200px 45px 170px 45px;
 
     @media (max-width: 550px) {
         padding: 40px 45px;
@@ -237,6 +237,7 @@ export const SearchIcon = styled.button`
 `
 
 export const SearchInput = styled.input`
+    color: #fff;
     background: #44444459;
     transition: width .5s;
     height: 30px;

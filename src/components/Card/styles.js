@@ -34,7 +34,7 @@ export const Group = styled.div`
 
     > ${Container}:first-of-type {
         @media (min-width: 1100px) {
-            margin-top: -150px;
+            margin-top: -110px;
         }
     } 
 `
