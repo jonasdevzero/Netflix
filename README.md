@@ -8,7 +8,7 @@
 
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
-* [Demonstration](#demonstration)
+* [Gifs](#gifs)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
@@ -28,7 +28,7 @@ This project is a netflix clone created with react, firebase and styled-componen
 * [fuse.js](https://fusejs.io/)
 
 <!-- PRESENTATION -->
-## Demonstration
+## Gifs
 
 <p align="center">Home page and login</p>
 <p align="center"><img src="https://github.com/jonasdevzero/Netflix/blob/master/readmeFiles/presentation-part1.gif" alt="gif presentation part 1"/></p>
