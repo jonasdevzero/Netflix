@@ -1,4 +1,4 @@
-<h1 align="center">Netflix clone with React</h1>
+<h1 align="center">Netflix clone with React and Firebase</h1>
 
 <img src="https://github.com/jonasdevzero/Netflix/blob/master/readmeFiles/presentationImageForGitHub.png" alt="image presentation" align="center" />
 
