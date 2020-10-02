@@ -38,7 +38,7 @@ This project is a netflix clone created with react, firebase and styled-componen
 
 <!-- GETTING STARTED -->
 ## Getting Started
-To get a local copy up and running follow these simple example steps or accsses this video for more details: /- comming soon -/ .
+To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 * npm
