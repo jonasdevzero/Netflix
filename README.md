@@ -1,18 +1,19 @@
-<h1 align="center">Netflix clone with React</h1>
-<img src="https://github.com/jonasdevzero/Netflix/blob/master/public/images/misc/presentationImageForGitHub.png" alt="image presentation" align="center" />
+<h1 align="center">Netflix clone with React and Firebase</h1>
+
+<img src="https://github.com/jonasdevzero/Netflix/blob/master/readmeFiles/presentationImageForGitHub.png" alt="image presentation" align="center" />
+
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
+* [Gifs](#gifs)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
 * [Contact](#contact)
 * [knowledge acquired.](#knowledge-acquired)
-
-
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -26,10 +27,18 @@ This project is a netflix clone created with react, firebase and styled-componen
 * [Normilize.css](https://github.com/necolas/normalize.css/)
 * [fuse.js](https://fusejs.io/)
 
+<!-- PRESENTATION -->
+## Gifs
+
+<p align="center">Home page and login</p>
+<p align="center"><img src="https://github.com/jonasdevzero/Netflix/blob/master/readmeFiles/presentation-part1.gif" alt="gif presentation part 1"/></p>
+<p align="center">Browse page and your functionalities</p>
+<p align="center"><img src="https://github.com/jonasdevzero/Netflix/blob/master/readmeFiles/presentation-part2.gif" alt="gif presentation part 2"/></p>
+
 
 <!-- GETTING STARTED -->
 ## Getting Started
-To get a local copy up and running follow these simple example steps or accsses this video for more details: /- comming soon -/ .
+To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 * npm
