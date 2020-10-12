@@ -29,6 +29,7 @@ This project is a netflix clone created with react, firebase and styled-componen
 * [fuse.js](https://fusejs.io/)
 
 ## Demo
+https://netflix-devzero.vercel.app/
 
 
 <!-- PRESENTATION -->
