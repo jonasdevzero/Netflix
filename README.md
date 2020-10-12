@@ -28,7 +28,7 @@ This project is a netflix clone created with react, firebase and styled-componen
 * [Normilize.css](https://github.com/necolas/normalize.css/)
 * [fuse.js](https://fusejs.io/)
 
-# Demo
+## Demo
 
 
 <!-- PRESENTATION -->
