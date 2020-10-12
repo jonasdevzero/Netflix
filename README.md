@@ -8,6 +8,7 @@
 
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
+* [Demo](#demo)
 * [Gifs](#gifs)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
@@ -26,6 +27,9 @@ This project is a netflix clone created with react, firebase and styled-componen
 * [Firebase](https://firebase.google.com/)
 * [Normilize.css](https://github.com/necolas/normalize.css/)
 * [fuse.js](https://fusejs.io/)
+
+# Demo
+
 
 <!-- PRESENTATION -->
 ## Gifs
