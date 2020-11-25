@@ -1,6 +1,6 @@
 <h1 align="center">Netflix clone with React and Firebase</h1>
 
-<img src="https://github.com/jonasdevzero/Media-Hub/blob/master/projects/netflix/landing.png" alt="image presentation" align="center" />
+<img src="https://github.com/jonasdevzero/MediaHub/blob/master/projects/netflix/browse.PNG" alt="browse page" align="center" />
 
 
 <!-- TABLE OF CONTENTS -->
@@ -35,11 +35,8 @@ https://netflix-devzero.vercel.app/
 <!-- PRESENTATION -->
 ## Gifs
 
-<p align="center">Home page and login</p>
-<p align="center"><img src="https://github.com/jonasdevzero/Media-Hub/blob/master/projects/netflix/presentation1.gif" alt="gif presentation part 1"/></p>
-<p align="center">Browse page and your functionalities</p>
-<p align="center"><img src="https://github.com/jonasdevzero/Media-Hub/blob/master/projects/netflix/presentation2.gif" alt="gif presentation part 2"/></p>
-
+<p align="center">All functionalities</p>
+<p align="center"><img src="https://github.com/jonasdevzero/Media-Hub/blob/master/projects/netflix/gif.gif" alt="gif presentation part 1"/></p>
 
 <!-- GETTING STARTED -->
 ## Getting Started
