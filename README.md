@@ -8,8 +8,8 @@
 
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
+* [Preview](#preview)
 * [Deploy](#deploy)
-* [Gifs](#gifs)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
@@ -28,15 +28,13 @@ This project is a netflix clone created with react, firebase and styled-componen
 * [Normilize.css](https://github.com/necolas/normalize.css/)
 * [fuse.js](https://fusejs.io/)
 
+<!-- PRESENTATION -->
+<h2 align="center">Preview</h2>
+
+<p align="center"><img src="https://github.com/jonasdevzero/Media-Hub/blob/master/projects/netflix/gif.gif" alt="gif presentation part 1"/></p>
+
 ## Deploy
 https://netflix-devzero.vercel.app/
-
-
-<!-- PRESENTATION -->
-## Gifs
-
-<p align="center">All functionalities</p>
-<p align="center"><img src="https://github.com/jonasdevzero/Media-Hub/blob/master/projects/netflix/gif.gif" alt="gif presentation part 1"/></p>
 
 <!-- GETTING STARTED -->
 ## Getting Started
